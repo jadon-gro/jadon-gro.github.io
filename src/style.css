@@ -1,139 +1,181 @@
-body {
-  background-color: #23252C;
-  font-family: Inter, sans-serif;
-  color: white;
-}
-main {
-  border-radius: 10px;
-  width: 317px;
-  margin: 0 auto;
-  margin-top: 20px;
-  padding-bottom: 20px;
-  background-color: #1A1B21;
-  box-shadow: -1px 1px .5px rgba(0, 0, 0, 0.2);
-  letter-spacing: 0.02em;
-}
-a {
-  color: inherit; /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
-  width: inherit;
+* {
+  box-sizing: border-box;
 }
 
-.card--name {
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  background-color: #F5F7FB;
+  background-image:url(../blob1.svg), url(../blob2.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, right top;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.title-card{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main--title {
   font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 31.25px;
+  line-height: 37px;
   text-align: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #293264;
   margin: 0;
 }
 
-.card--job {
-  margin-top: 6px;
-  margin-bottom: 0;
+.main--description {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-family: "Inter";
   font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #293264;
+}
+
+.main--button {
+  border: none;
+  width: 193px;
+  height: 52px;
+  left: 179px;
+  top: 314px;
+
+  background: #4D5B9E;
+  border: 1px solid #4D5B9E;
+  border-radius: 15px;
+
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #F5F7FB;
+  transition: color .2s, background-color .2s;
+}
+
+.main--button:hover {
+  background-color:#F5F7FB;
+  color:#4D5B9E;
+}
+
+.main--button:active {
+  opacity: 50%;
+}
+
+.question--option {
+  border: 1px solid #4D5B9E;
+  border-radius: 8px;
+  background-color: transparent;
+  min-width: 70px;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 10.24px;
+  padding: 2px 15px 2px 15px;
+  color: #293264;
+}
+
+.question--options {
+  display: flex;
+  gap: 13px;
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+
+.back {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-right: 100%;
+  margin-bottom: 10px;
+  color:#293264;
+  cursor: pointer;
+  }
+
+.question--line {
+  border: 0.794239px solid #DBDEF0;
+}
+
+.question--option.unchecked {
+  background-color: #D6DBF5;
+  border-color: #D6DBF5;
+}
+
+.question--option.incorrect {
+  background-color: #F8BCBC;
+  border-color: #F8BCBC;
+  opacity: 30%;
+}
+
+.question--option.correct {
+  background-color: #94D7A2;
+  border-color: #94D7A2;
+}
+
+.question--option.unchosen {
+  opacity: 30%;
+}
+
+.main--game {
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question--question {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 19px;
+  color: #293264;
+  margin-bottom: 16px;
+}
+
+.main--game-bottom {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.score {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
   font-size: 12.8px;
   line-height: 15px;
   text-align: center;
 
-  color: #F3BF99;
+  color: #293264;
 }
 
-.card--url {
-  margin-top: 9px;
-  margin-bottom: 0px;
-  font-weight: 400;
-  font-size: 10.24px;
-  line-height: 150%;
-  /* identical to box height, or 15px */
+.main--difficulty {
+  margin-bottom: 10px;
+  margin-top: 50px;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
   text-align: center;
 
-  color: #F5F5F5;
+  color: #293264;
 }
 
-.card--button {
-  margin-top: 15px;
-  margin-bottom: 33px;
+.main--difficulty-buttons {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
 }
-
-.card--button > a > button {
-  width: 125px;
-  height: 35px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 9px 13px 9px 11px;
-  gap: 8px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-  border-radius: 6px;
-}
-
-
-
-.card--email_btn {
-  border: 1px solid #D1D5DB;
-  background: #FFFFFF;
-  color: #374151;
-  transition: opacity 0.15s;
-}
-
-.card--email_btn:hover {
-  opacity: 0.8
-}
-
-.card--linkedin_btn {
-  background: #5093E2;
-  font-style: normal;
-  color: #FFFFFF;
-  border: 1px solid #5093E2;
-  transition: background 0.2s;
-  transition: color 0.2s;
-}
-
-.card--linkedin_btn:hover {
-  background: #FFFFFF;
-  color: #5093E2;
-}
-
-.card--content > h2 {
-  margin: 0;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 150%;
-  /* or 24px */
-
-  color: #F5F5F5;
-}
-
-.card--content > p {
-  margin-top: 2px;
-  margin-bottom: 20px;
-  font-weight: 100;
-  font-size: 10.24px;
-  line-height: 170%;
-  
-  /* or 15px */
-
-  color: #DCDCDC;
-}
-
-.card--content {
-  margin: 25px;
-}
-
-.card--profile_photo {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  width: 317px;
-  height: 317px;
-}
-
-
